@@ -1,0 +1,14 @@
+{
+  "name": "esport-score-desktop-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "author": "Kristoffer Svensson",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.10"
+  }
+}
