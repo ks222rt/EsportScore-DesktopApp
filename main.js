@@ -16,7 +16,7 @@ var createWindow = () => {
         resizable: false
     });
 
-    mainWindow.loadURL('file://' + __dirname + '/app/views/index.html');
+    mainWindow.loadURL('file://' + __dirname + '/public/index.html');
 
     // Open devtools
     mainWindow.webContents.openDevTools();
