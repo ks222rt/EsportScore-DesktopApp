@@ -1,6 +1,22 @@
-let React = require('react');
+/*let React = require('react');*/
+'use strict';
+import React from 'react';
 
-let About = React.createClass({
+class About extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    return
+      <div>
+        <h3>About component</h3>
+      </div>
+    ;
+  }
+}
+
+/*let About = React.createClass({
   render: function(){
     return(
       <div>
@@ -10,4 +26,5 @@ let About = React.createClass({
   }
 });
 
-module.exports = About;
+module.exports = About;*/
+export default About;
