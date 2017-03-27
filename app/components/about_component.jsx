@@ -1,30 +1,17 @@
-/*let React = require('react');*/
-'use strict';
 import React from 'react';
 
-class About extends React.Component{
-  constructor(props){
+export default class About extends React.Component {
+
+  constructor(props) {
     super(props);
   }
 
-  render(){
-    return
-      <div>
-        <h3>About component</h3>
-      </div>
-    ;
-  }
-}
-
-/*let About = React.createClass({
-  render: function(){
+  render() {
     return(
-      <div>
+      <div id="about-container">
         <h3>About component</h3>
       </div>
     );
   }
-});
 
-module.exports = About;*/
-export default About;
+}

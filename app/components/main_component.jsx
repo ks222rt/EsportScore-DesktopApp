@@ -1,36 +1,27 @@
-/*let React = require('react');
-let Nav = require('Nav');*/
 import React from 'react';
-import Nav from 'Nav';
+import {Nav} from 'Nav';
 
-class Main extends React.Component{
-  constructor(props){
+export default class Main extends React.Component {
+
+  constructor(props) {
     super(props);
   }
 
-  render(){
-    return
-      <div>
-        <Nav/>
-        <h2>Hello World</h2>
-        {this.props.children}
-      </div>
-    ;
-  }
-}
-/*
-let Main = React.createClass({
-  render: function(){
+  render() {
     return(
-      <div>
-        <Nav/>
+      <div id="container">
+        <div id="nav-container">
+          <Nav/>
+        </div>
+
         <h2>Hello World</h2>
-        {this.props.children}
+        
+        <div id="content-container">
+          {this.props.children}
+        </div>
+      
       </div>
     );
   }
-});
 
-module.exports = Main; */
-
-export default Main;
+}
