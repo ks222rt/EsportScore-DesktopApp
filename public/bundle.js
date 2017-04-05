@@ -46,6 +46,12 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -56,25 +62,53 @@
 
 	var _reactRouter = __webpack_require__(159);
 
-	var _main_component = __webpack_require__(222);
+	var _Main = __webpack_require__(222);
 
-	var _about_component = __webpack_require__(224);
+	var _About = __webpack_require__(224);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(
-	  _reactRouter.Router,
-	  { history: _reactRouter.hashHistory },
-	  _react2.default.createElement(
-	    _reactRouter.Route,
-	    { path: '/', component: _main_component.Main },
-	    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _about_component.About })
-	  )
-	), document.getElementById('app')); /*let React = require('react');
-	                                    let ReactDOM = require('react-dom');
-	                                    let {Route, Router, IndexRouter, hashHistory} = require('react-router');
-	                                    let Main = require('Main');
-	                                    let About = require('About');*/
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var App = function (_React$Component) {
+	  _inherits(App, _React$Component);
+
+	  function App() {
+	    _classCallCheck(this, App);
+
+	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	  }
+
+	  _createClass(App, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          _reactRouter.Router,
+	          { history: _reactRouter.hashHistory },
+	          _react2.default.createElement(
+	            _reactRouter.Route,
+	            { path: '/', component: _Main.Main },
+	            _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About.About })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return App;
+	}(_react2.default.Component);
+
+	exports.default = App;
+
+
+	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -25446,9 +25480,7 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*let React = require('react');
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               let Nav = require('Nav');*/
-
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var Main = function (_React$Component) {
 	  _inherits(Main, _React$Component);
@@ -25486,23 +25518,6 @@
 
 	  return Main;
 	}(_react2.default.Component);
-	/*
-	let Main = React.createClass({
-	  render: function(){
-	    return(
-	      <div>
-	        <Nav/>
-	        <h2>Hello World</h2>
-	        {this.props.children}
-	      </div>
-	    );
-	  }
-	});
-
-	module.exports = Main; 
-
-	export default Main;*/
-
 
 	exports.default = Main;
 
@@ -25524,16 +25539,13 @@
 
 	var _reactRouter = __webpack_require__(159);
 
-	var _reactRouter2 = _interopRequireDefault(_reactRouter);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*let React = require('react');
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               let {Link} = require('react-router');*/
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var Nav = function (_React$Component) {
 	  _inherits(Nav, _React$Component);
@@ -25556,22 +25568,22 @@
 	          'Nav'
 	        ),
 	        _react2.default.createElement(
-	          _reactRouter2.default,
+	          _reactRouter.Link,
 	          { to: '/Start' },
 	          'Start'
 	        ),
 	        _react2.default.createElement(
-	          _reactRouter2.default,
+	          _reactRouter.Link,
 	          { to: '/About' },
 	          'About'
 	        ),
 	        _react2.default.createElement(
-	          _reactRouter2.default,
+	          _reactRouter.Link,
 	          { to: '/CSGO' },
 	          'CSGO'
 	        ),
 	        _react2.default.createElement(
-	          _reactRouter2.default,
+	          _reactRouter.Link,
 	          { to: '/' },
 	          'X'
 	        )
@@ -25581,24 +25593,6 @@
 
 	  return Nav;
 	}(_react2.default.Component);
-	/*
-	let Nav = React.createClass({
-	  render: function(){
-	    return(
-	      <div>
-	        <h3>Nav</h3>
-	        <Link to='/Start'>Start</Link>
-	        <Link to='/About'>About</Link>
-	        <Link to='/CSGO'>CSGO</Link>
-	        <Link to='/'>X</Link>
-	      </div>
-	    );
-	  }
-	});
-
-	module.exports = Nav;
-	export default Nav;*/
-
 
 	exports.default = Nav;
 
@@ -25624,7 +25618,7 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*let React = require('react');*/
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var About = function (_React$Component) {
 	  _inherits(About, _React$Component);
@@ -25652,20 +25646,6 @@
 
 	  return About;
 	}(_react2.default.Component);
-
-	/*let About = React.createClass({
-	  render: function(){
-	    return(
-	      <div>
-	        <h3>About component</h3>
-	      </div>
-	    );
-	  }
-	});
-
-	module.exports = About;
-	export default About;*/
-
 
 	exports.default = About;
 
