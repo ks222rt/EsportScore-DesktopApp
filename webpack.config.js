@@ -1,9 +1,11 @@
-let path = require('path');
+var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-    entry: path.resolve(__dirname + '/app/app.jsx'),
+    context: __dirname + '/app',
+    entry: './app.jsx',
     output: {
-        path: path.resolve(__dirname + '/public/'),
+        path: __dirname + '/public/',
         filename: 'bundle.js'
     },
     resolve: {
@@ -22,8 +24,8 @@ module.exports = {
                 query: {
                     presets: ['react', 'es2015', 'stage-0']
                 },
-                test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/
+                test: /.jsx?$/,
+                exclude: /node_modules/
             }
         ]
     }

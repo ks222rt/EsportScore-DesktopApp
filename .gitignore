@@ -38,3 +38,6 @@ jspm_packages
 
 # Vs code
 .vscode
+
+# Bundle file from webpack
+.public/bundle.js
