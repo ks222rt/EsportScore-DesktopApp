@@ -9,12 +9,11 @@ export default class Nav extends React.Component {
 
   render() {
     return(
-      <div id="nav-bar">
+      <div id="side-nav-bar">
         <h3>Nav</h3>
-        <Link to='/Start'>Start</Link>
+        <Link to='/'>Start</Link>
         <Link to='/About'>About</Link>
         <Link to='/CSGO'>CSGO</Link>
-        <Link to='/'>X</Link>
       </div>
     );
   }

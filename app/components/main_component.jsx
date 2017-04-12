@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from 'Nav';
+import UtilBox from 'UtilBox';
 
 export default class Main extends React.Component {
 
@@ -10,8 +11,13 @@ export default class Main extends React.Component {
   render() {
     return(
       <div id="container">
+        
         <div id="nav-container">
           <Nav/>
+        </div>
+
+        <div id='util-container'>
+          <UtilBox/>
         </div>
 
         <h2>Hello World</h2>

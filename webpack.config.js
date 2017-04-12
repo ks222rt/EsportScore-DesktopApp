@@ -12,8 +12,10 @@ module.exports = {
         root: __dirname,
         alias: {
             Nav: 'app/components/nav_component.jsx',
+            UtilBox: 'app/components/util_bar_component.jsx',
             Main: 'app/components/main_component.jsx',
-            About: 'app/components/about_component.jsx'
+            About: 'app/components/about_component.jsx',
+            Csgo: 'app/components/csgo_component.jsx'
         },
         extensions: ['', '.js', '.jsx']
     },

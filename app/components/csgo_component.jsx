@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class About extends React.Component {
+export default class CSGO extends React.Component {
 
   constructor(props) {
     super(props);
@@ -8,8 +8,8 @@ export default class About extends React.Component {
 
   render() {
     return(
-      <div id="about-container">
-        <h3>About component</h3>
+      <div id="csgo-container">
+        <h3>CSGO component</h3>
       </div>
     );
   }
