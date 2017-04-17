@@ -82,6 +82,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	__webpack_require__(227);
+
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 
@@ -25776,6 +25778,32 @@
 	}(_react2.default.Component);
 
 	exports.default = CSGO;
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/index.js!./main.less\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!../../node_modules/style-loader/addStyles.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/index.js!./main.less", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/index.js!./main.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ }
 /******/ ]);

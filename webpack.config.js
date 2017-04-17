@@ -1,4 +1,3 @@
-var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
@@ -17,7 +16,7 @@ module.exports = {
             About: 'app/components/about_component.jsx',
             Csgo: 'app/components/csgo_component.jsx'
         },
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js', '.jsx', '.less']
     },
     module: {
         loaders: [
@@ -26,9 +25,16 @@ module.exports = {
                 query: {
                     presets: ['react', 'es2015', 'stage-0']
                 },
-                test: /.jsx?$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/
-            }
+            },            
+            { 
+                loader: 'style-loader!css-loader!less-loader', 
+                test: /\.less$/,
+                exclude: /node_modules/ }
         ]
-    }
+    },
+    plugins: [
+        new webpack.IgnorePlugin(new RegExp("^(fs|ipc)$"))
+    ]
 };
