@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     context: __dirname + '/app',
@@ -16,25 +17,35 @@ module.exports = {
             About: 'app/components/about_component.jsx',
             Csgo: 'app/components/csgo_component.jsx'
         },
-        extensions: ['', '.js', '.jsx', '.less']
+        extensions: ['', '.js', '.jsx', '.css', '.less']
     },
     module: {
+        preLoaders: [
+            { loader: 'source-map' }
+        ],
         loaders: [
             {
+                test: /\.jsx?$/,
                 loader: 'babel-loader',
                 query: {
                     presets: ['react', 'es2015', 'stage-0']
-                },
-                test: /\.jsx?$/,
-                exclude: /node_modules/
+                },              
+                exclude: /node_modules/  
             },            
             { 
-                loader: 'style-loader!css-loader!less-loader', 
-                test: /\.less$/,
-                exclude: /node_modules/ }
+                test:  /\.(less|css)$/,
+                loader: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: "css-loader!less-loader"
+                }), 
+            }
         ]
     },
     plugins: [
-        new webpack.IgnorePlugin(new RegExp("^(fs|ipc)$"))
-    ]
+        new webpack.IgnorePlugin(new RegExp("^(fs|ipc)$")),
+
+        new ExtractTextPlugin('style.css')
+    ],
+
+    stats: { colors: true }
 };

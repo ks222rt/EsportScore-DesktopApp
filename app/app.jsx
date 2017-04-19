@@ -1,4 +1,4 @@
-require('./less/main.less');
+require('/less/main.less');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Router, IndexRouter, hashHistory} from 'react-router';
