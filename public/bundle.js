@@ -14180,6 +14180,11 @@ var Main = function (_React$Component) {
         'div',
         { id: 'container' },
         _react2.default.createElement(
+          'h1',
+          null,
+          'Hello World'
+        ),
+        _react2.default.createElement(
           'div',
           { id: 'nav-container' },
           _react2.default.createElement(_Nav2.default, null)
@@ -14188,11 +14193,6 @@ var Main = function (_React$Component) {
           'div',
           { id: 'util-container' },
           _react2.default.createElement(_UtilBox2.default, null)
-        ),
-        _react2.default.createElement(
-          'h2',
-          null,
-          'Hello World'
         ),
         _react2.default.createElement(
           'div',
@@ -14287,24 +14287,35 @@ var Nav = function (_React$Component) {
         'div',
         { id: 'side-nav-bar' },
         _react2.default.createElement(
-          'h3',
-          null,
-          'Nav'
-        ),
-        _react2.default.createElement(
-          _reactRouter.Link,
-          { to: '/' },
-          'Start'
-        ),
-        _react2.default.createElement(
-          _reactRouter.Link,
-          { to: '/About' },
-          'About'
-        ),
-        _react2.default.createElement(
-          _reactRouter.Link,
-          { to: '/CSGO' },
-          'CSGO'
+          'ul',
+          { id: 'links-container' },
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/' },
+              'Start'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/About' },
+              'About'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/CSGO' },
+              'CSGO'
+            )
+          )
         )
       );
     }
@@ -16314,7 +16325,7 @@ exports = module.exports = __webpack_require__(128)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #000;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #fbfafa;\n  margin: 0;\n  padding: 0;\n}\n#app {\n  width: 97%;\n  margin: 0 auto;\n  background-color: #fbfafa;\n}\n#links-ul-list {\n  list-style-type: none;\n}\n#links-ul-list li:link {\n  text-decoration: none;\n}\n", ""]);
 
 // exports
 

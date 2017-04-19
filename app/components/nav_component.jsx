@@ -10,10 +10,11 @@ export default class Nav extends React.Component {
   render() {
     return(
       <div id="side-nav-bar">
-        <h3>Nav</h3>
-        <Link to='/'>Start</Link>
-        <Link to='/About'>About</Link>
-        <Link to='/CSGO'>CSGO</Link>
+        <ul id="links-container">
+          <li><Link to='/'>Start</Link></li>
+          <li><Link to='/About'>About</Link></li>
+          <li><Link to='/CSGO'>CSGO</Link></li>
+        </ul>
       </div>
     );
   }
