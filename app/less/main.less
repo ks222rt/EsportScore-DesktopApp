@@ -1,21 +1,138 @@
+@import './flex-less.less';
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css');
 @body-bg: #fbfafa;
+@body-bgc: #333;
 
-body {
-  background-color: @body-bg;
+* {
   margin: 0;
   padding: 0;
 }
 
-#app { 
-  width: 97%;
-  margin: 0 auto;
-  background-color: @body-bg;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-ul, #links-ul-list {
+html {
+  height: 100%;
+}
+
+body, .app {
+  background-color: @body-bg;
+  min-height: 100vh;
+  width: 100%;
+  font: 12px/1 'Montserrat', sans-serif;
+  color: @body-bgc;
+  background: #333;
+  overflow-x: hidden;
+}
+
+.container { 
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidebar {
+  position: absolute;
+  width: 20%;
+}
+
+.content {
+  flex: 1;
+  padding: 2%;
+  background: #eee;
+  box-shadow: 0 0 5px rgba(0,0,0,1);
+  transform: translate3d(0,0,0);
+  transition: transform .3s;
+}
+
+.content.isOpen {
+  transform: translate3d(20%, 0, 0);
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button:before {
+  content: '\f0c9';
+  font: 42px fontawesome;
+}
+
+.minimize-button {
+  cursor: pointer;
+}
+
+.minimize-button:before {
+  content: '\f068';
+  font: 30px fontawesome;
+}
+
+.close-button {
+  cursor: pointer;
+}
+
+.close-button:before {
+  content: '\f00d';
+  font: 30px fontawesome;
+}
+
+.title {
+  font-size: 135%;
+  line-height: 290%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #eee;
+  border-bottom: 1px solid #222;
+  background: #2a2a2a;
+}
+
+
+.nav li a {
+  position: relative;
+  display: block;
+  padding: 15px 15px 15px 50px;
+  font-size: 12px;
+  color: #eee;
+  border-bottom: 1px solid #222;
+}
+
+.nav li a:before {
+  font: 14px fontawesome;
+  position: absolute;
+  top: 14px;
+  left: 20px;
+}
+
+.nav li:nth-child(1) a:before { content: '\f00a'; }
+.nav li:nth-child(2) a:before { content: '\f012'; }
+.nav li:nth-child(3) a:before { content: '\f0e8'; }
+/*.nav li:nth-child(4) a:before { content: '\f0c3'; }
+.nav li:nth-child(5) a:before { content: '\f022'; }
+.nav li:nth-child(6) a:before { content: '\f115'; }
+.nav li:nth-child(7) a:before { content: '\f085'; }
+.nav li:nth-child(8) a:before { content: '\f023'; left: 23px; }*/
+
+.nav li a:hover {
+  background: #444;
+}
+
+.nav li a.active {
+  box-shadow: inset 5px 0 0 #5b5, inset 6px 0 0 #222;
+  background: #444;
+}
+
+
+/*ul, #links-ul-list {
   list-style-type: none;
 
   li:link {
     text-decoration: none;
   }
-}
+}*/

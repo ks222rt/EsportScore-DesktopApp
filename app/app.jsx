@@ -1,4 +1,5 @@
 require('./less/main.less');
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Router, IndexRouter, hashHistory} from 'react-router';
@@ -21,4 +22,4 @@ export default class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.querySelector('.app'));

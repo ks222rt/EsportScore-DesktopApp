@@ -14178,25 +14178,16 @@ var Main = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { id: 'container' },
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Hello World'
-        ),
+        { className: 'container' },
+        _react2.default.createElement(_Nav2.default, null),
         _react2.default.createElement(
           'div',
-          { id: 'nav-container' },
-          _react2.default.createElement(_Nav2.default, null)
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'util-container' },
-          _react2.default.createElement(_UtilBox2.default, null)
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'content-container' },
+          { className: 'content isOpen' },
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(_UtilBox2.default, null)
+          ),
           this.props.children
         )
       );
@@ -14285,10 +14276,15 @@ var Nav = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { id: 'side-nav-bar' },
+        { className: 'sidebar' },
+        _react2.default.createElement(
+          'div',
+          { className: 'title' },
+          'Esport Score'
+        ),
         _react2.default.createElement(
           'ul',
-          { id: 'links-container' },
+          { className: 'nav' },
           _react2.default.createElement(
             'li',
             null,
@@ -14368,16 +14364,9 @@ var UtilBox = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { id: 'util-box' },
-        _react2.default.createElement(
-          'div',
-          { id: 'minimize-button' },
-          '-'
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'close-button' },
-          'X'
-        )
+        _react2.default.createElement('a', { className: 'button' }),
+        _react2.default.createElement('div', { className: 'minimize-button' }),
+        _react2.default.createElement('div', { className: 'close-button' })
       );
     }
   }]);
@@ -16322,10 +16311,11 @@ module.exports = Array.isArray || function (arr) {
 
 exports = module.exports = __webpack_require__(128)(undefined);
 // imports
-
+exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);", ""]);
+exports.push([module.i, "@import url(http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);", ""]);
 
 // module
-exports.push([module.i, "body {\n  background-color: #fbfafa;\n  margin: 0;\n  padding: 0;\n}\n#app {\n  width: 97%;\n  margin: 0 auto;\n  background-color: #fbfafa;\n}\n#links-ul-list {\n  list-style-type: none;\n}\n#links-ul-list li:link {\n  text-decoration: none;\n}\n", ""]);
+exports.push([module.i, "/*---FlexBox---\n  @flex: flex, flex-inline\n  --------------------------*/\n/*---Flexbox Direction---\n  @type: row, column\n  Direction: normal, reverse\n  --------------------------*/\n/*---Flexbox Wrap---\n  @wrap: wrap, nowrap, wrap-reverse\n  --------------------------*/\n/*---Flexbox Justify Content---\n  @justify-content: start, end, center, space-between, space-around\n  *FIXME* - Creates duplicate CSS\n  --------------------------*/\n/*---Flexbox Align Items---\n  @align-items: center, baseline, stretch, start, end\n  --------------------------*/\n/*---Flexbox Align Content---\n  @align-items: start, end, center, space-between, space-around\n  *FIXME* - Creates duplicate CSS\n  --------------------------*/\n* {\n  margin: 0;\n  padding: 0;\n}\n*,\n*:before,\n*:after {\n  box-sizing: border-box;\n}\nhtml {\n  height: 100%;\n}\nbody,\n.app {\n  background-color: #fbfafa;\n  min-height: 100vh;\n  width: 100%;\n  font: 12px/1 'Montserrat', sans-serif;\n  color: #333;\n  background: #333;\n  overflow-x: hidden;\n}\n.container {\n  display: flex;\n  width: 100%;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n.sidebar {\n  position: absolute;\n  width: 20%;\n}\n.content {\n  flex: 1;\n  padding: 2%;\n  background: #eee;\n  box-shadow: 0 0 5px #000000;\n  transform: translate3d(0, 0, 0);\n  transition: transform .3s;\n}\n.content.isOpen {\n  transform: translate3d(20%, 0, 0);\n}\n.button {\n  cursor: pointer;\n}\n.button:before {\n  content: '\\F0C9';\n  font: 42px fontawesome;\n}\n.minimize-button {\n  cursor: pointer;\n}\n.minimize-button:before {\n  content: '\\F068';\n  font: 30px fontawesome;\n}\n.close-button {\n  cursor: pointer;\n}\n.close-button:before {\n  content: '\\F00D';\n  font: 30px fontawesome;\n}\n.title {\n  font-size: 135%;\n  line-height: 290%;\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 3px;\n  color: #eee;\n  border-bottom: 1px solid #222;\n  background: #2a2a2a;\n}\n.nav li a {\n  position: relative;\n  display: block;\n  padding: 15px 15px 15px 50px;\n  font-size: 12px;\n  color: #eee;\n  border-bottom: 1px solid #222;\n}\n.nav li a:before {\n  font: 14px fontawesome;\n  position: absolute;\n  top: 14px;\n  left: 20px;\n}\n.nav li:nth-child(1) a:before {\n  content: '\\F00A';\n}\n.nav li:nth-child(2) a:before {\n  content: '\\F012';\n}\n.nav li:nth-child(3) a:before {\n  content: '\\F0E8';\n}\n/*.nav li:nth-child(4) a:before { content: '\\f0c3'; }\n.nav li:nth-child(5) a:before { content: '\\f022'; }\n.nav li:nth-child(6) a:before { content: '\\f115'; }\n.nav li:nth-child(7) a:before { content: '\\f085'; }\n.nav li:nth-child(8) a:before { content: '\\f023'; left: 23px; }*/\n.nav li a:hover {\n  background: #444;\n}\n.nav li a.active {\n  box-shadow: inset 5px 0 0 #5b5, inset 6px 0 0 #222;\n  background: #444;\n}\n/*ul, #links-ul-list {\n  list-style-type: none;\n\n  li:link {\n    text-decoration: none;\n  }\n}*/\n", ""]);
 
 // exports
 
@@ -28596,7 +28586,7 @@ var App = function (_React$Component) {
 exports.default = App;
 
 
-_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
+_reactDom2.default.render(_react2.default.createElement(App, null), document.querySelector('.app'));
 
 /***/ })
 /******/ ]);

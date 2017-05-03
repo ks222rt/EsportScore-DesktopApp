@@ -10,20 +10,24 @@ export default class Main extends React.Component {
 
   render() {
     return(
-      <div id="container">
-        <h1>Hello World</h1>
-        <div id="nav-container">
-          <Nav/>
-        </div>
+      <div className="container">
 
-        <div id='util-container'>
-          <UtilBox/>
-        </div>
+        {/* Containter for navigation bar */}
+        <Nav/>
         
-        <div id="content-container">
+        {/* Container for all content displayed */}
+        <div className='content isOpen' >
+
+          {/* Container for app header and 
+            container for minimize/exit buttons */}
+          <div>
+            <UtilBox/>
+          </div>
+
+          {/* Container for all content */}
           {this.props.children}
+
         </div>
-      
       </div>
     );
   }

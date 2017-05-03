@@ -9,8 +9,11 @@ export default class Nav extends React.Component {
 
   render() {
     return(
-      <div id="side-nav-bar">
-        <ul id="links-container">
+      <div className='sidebar'>
+        <div className='title'>
+          Esport Score
+        </div>
+        <ul className="nav">
           <li><Link to='/'>Start</Link></li>
           <li><Link to='/About'>About</Link></li>
           <li><Link to='/CSGO'>CSGO</Link></li>
