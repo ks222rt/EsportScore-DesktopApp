@@ -55,8 +55,23 @@ body, .app {
   transform: translate3d(20%, 0, 0);
 }
 
+/**
+
+  Util box and the buttons.
+
+**/
+
+.util-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 .button {
   cursor: pointer;
+  order: 1;
+  display: inline-block;
+  margin-right: auto;
 }
 
 .button:before {
@@ -66,6 +81,9 @@ body, .app {
 
 .minimize-button {
   cursor: pointer;
+  order: 2;
+  align-self: flex-end;
+  margin-right: 1%;
 }
 
 .minimize-button:before {
@@ -75,6 +93,9 @@ body, .app {
 
 .close-button {
   cursor: pointer;
+  order: 3;
+  position: absolute;
+  right: 22%;
 }
 
 .close-button:before {
@@ -127,6 +148,9 @@ body, .app {
   box-shadow: inset 5px 0 0 #5b5, inset 6px 0 0 #222;
   background: #444;
 }
+
+
+
 
 
 /*ul, #links-ul-list {
