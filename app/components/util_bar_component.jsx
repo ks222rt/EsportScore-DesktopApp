@@ -9,10 +9,10 @@ export default class UtilBox extends React.Component {
 
   render() {
     return(
-      <div id='util-box'>
+      <div className='util-box'>
         <a className='button'></a>
-        <div className='minimize-button'></div>
-        <div className='close-button'></div>
+        <div className='minimize-button isOpen'></div>
+        <div className='close-button isOpen'></div>
       </div>
     );
   }

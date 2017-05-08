@@ -82,8 +82,12 @@ body, .app {
 .minimize-button {
   cursor: pointer;
   order: 2;
-  align-self: flex-end;
-  margin-right: 1%;
+  margin-right: 1.8%;
+  transition: transform .3s;
+}
+
+.minimize-button.isOpen {
+  transform: translate3d(-869%, 0, 0);
 }
 
 .minimize-button:before {
@@ -94,8 +98,11 @@ body, .app {
 .close-button {
   cursor: pointer;
   order: 3;
-  position: absolute;
-  right: 22%;
+  transition: transform .3s;
+}
+
+.close-button.isOpen {
+  transform: translateX(-834%);
 }
 
 .close-button:before {
