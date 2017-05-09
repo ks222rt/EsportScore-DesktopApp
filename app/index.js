@@ -16,11 +16,9 @@ $(document).ready(() => {
         $('.close-button').toggleClass('isOpen');
     });
 
-    var selector = '.nav li a';
-    $(selector).on('click', () => {
-        console.log(selector);
-        $(selector).removeClass('active');
-        $(this).addClass('active');
+    $('.nav li a').on('click', function(e) {
+        $('.nav li a').removeClass('active');
+        $(this).addClass('active');           
     });
 });
 
