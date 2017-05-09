@@ -15,5 +15,14 @@ $(document).ready(() => {
         $('.minimize-button').toggleClass('isOpen');
         $('.close-button').toggleClass('isOpen');
     });
+
+    var selector = '.nav li a';
+    $(selector).on('click', () => {
+        console.log(selector);
+        $(selector).removeClass('active');
+        $(this).addClass('active');
+    });
 });
+
+    
         

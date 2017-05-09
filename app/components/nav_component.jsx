@@ -14,7 +14,7 @@ export default class Nav extends React.Component {
           Esport Score
         </div>
         <ul className="nav">
-          <li><Link to='/'>Start</Link></li>
+          <li><Link to='/' className='active'>Start</Link></li>
           <li><Link to='/About'>About</Link></li>
           <li><Link to='/CSGO'>CSGO</Link></li>
         </ul>
