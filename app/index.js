@@ -1,9 +1,4 @@
 'use strict';
-
-/*closeButton.addEventListener('click', () => {
-    ipcRenderer.send('close-main-window');
-});*/
-
 console.log('javascript file loaded...!');
 
 $(document).ready(() => {

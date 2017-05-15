@@ -26,5 +26,5 @@ ipcMain.on('close-main-window', () => {
 });
 
 ipcMain.on('minimize-window', () => {
-    console.log('göm fönstret!!');
+    mainWindow.minimize();
 });

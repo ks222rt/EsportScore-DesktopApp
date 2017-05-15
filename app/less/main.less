@@ -62,16 +62,20 @@ body, .app {
 **/
 
 .util-box {
+  margin-top: -1%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  -webkit-app-region: drag;
 }
 
 .button {
   cursor: pointer;
   order: 1;
+  z-index: 1;
   display: inline-block;
   margin-right: auto;
+  -webkit-app-region: no-drag;
 }
 
 .button:before {
@@ -84,6 +88,7 @@ body, .app {
   order: 2;
   margin-right: 1.8%;
   transition: transform .3s;
+  -webkit-app-region: no-drag;
 }
 
 .minimize-button.isOpen {
@@ -99,6 +104,7 @@ body, .app {
   cursor: pointer;
   order: 3;
   transition: transform .3s;
+  -webkit-app-region: no-drag;
 }
 
 .close-button.isOpen {

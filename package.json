@@ -17,6 +17,7 @@
     "css-loader": "^0.28.0",
     "electron-prebuilt": "^1.4.10",
     "extract-text-webpack-plugin": "^2.1.0",
+    "https": "^1.0.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
     "react": "^0.14.8",
