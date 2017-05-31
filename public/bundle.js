@@ -16605,24 +16605,54 @@ var CSGO = function (_React$Component) {
   }
 
   _createClass(CSGO, [{
-    key: 'getLeagues',
-    value: function getLeagues() {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
       var that = this;
+      this.setState({ isLoading: true });
 
       _csgo_client2.default.get_leagues().then(function (response) {
         that.setState({
-          leagues: response
+          leagues: response,
+          isLoading: false
         });
       }, function (errorMessage) {
-        console.error(errorMessage);
+        that.setState({
+          isLoading: false,
+          errorMessage: errorMessage.message
+        });
       });
     }
   }, {
     key: 'render',
     value: function render() {
-      /*var leagueList = leagues.map((league) => {
-        return <li>{league}</li>
-      });*/
+      var _state = this.state,
+          isLoading = _state.isLoading,
+          leagues = _state.leagues,
+          errorMessage = _state.errorMessage;
+
+
+      function renderLoadingBar() {
+        if (isLoading) {
+          return _react2.default.createElement(
+            'span',
+            { className: 'loading-bar' },
+            'Loading leagues....'
+          );
+        } else if (errorMessage) {
+          return _react2.default.createElement(
+            'span',
+            { className: 'error-message' },
+            errorMessage
+          );
+        } else if (leagues) {
+          /* Create a new component next time to create li element with each leagues matches */
+          return _react2.default.createElement(
+            'span',
+            null,
+            leagues.length
+          );
+        }
+      }
 
       return _react2.default.createElement(
         'div',
@@ -16632,11 +16662,7 @@ var CSGO = function (_React$Component) {
           null,
           'CSGO component'
         ),
-        _react2.default.createElement(
-          'button',
-          { onClick: this.getLeagues },
-          'Hello'
-        )
+        renderLoadingBar()
       );
     }
   }]);
