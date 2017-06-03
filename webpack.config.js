@@ -19,7 +19,9 @@ module.exports = {
             UtilBox$: path.resolve(__dirname, 'app/components/util_bar_component.jsx'),
             Main$:  path.resolve(__dirname, 'app/components/main_component.jsx'),
             About$:  path.resolve(__dirname, 'app/components/about_component.jsx'),
-            Csgo$:  path.resolve(__dirname, 'app/components/csgo_component.jsx')
+            Csgo$:  path.resolve(__dirname, 'app/components/csgo_component.jsx'),
+            CsgoMatches$: path.resolve(__dirname, 'app/components/csgo_league_matches.jsx'),
+            CsgoEvents$: path.resolve(__dirname, 'app/components/csgo_events_list.jsx')
         },
         extensions: ['.js', '.jsx', '.css', '.less']
     },
